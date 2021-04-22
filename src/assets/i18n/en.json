@@ -1,0 +1,11 @@
+{
+    "HOME": {
+        "TITLE": "Hello world from with ngx-translate!",
+        "SELECT": "Let me change the language from here",
+        "HELLO": "Heyyy {{value}}"
+    },
+    "PRODUCT": {
+        "HEADING": "Product Heading",
+        "DISCARD_CHANGES": "D you want to discard the changes?"
+    }
+}
