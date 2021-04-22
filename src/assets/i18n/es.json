@@ -1,37 +1,37 @@
 {
     "PLP": {
-        "SEARCH": "Search for",
-        "CART": "Cart"
+        "SEARCH": "Buscar productos",
+        "CART": "Carro"
     },
     "PDP": {
-        "ADDTOCART": "Add to cart"
+        "ADDTOCART": "Añadir a la cesta"
     },
     "CART": {
         "TOTAL": "Total",
-        "CHECKOUT": "Checkout",
-        "INCREASE": "Increase",
-        "DECREASE": "Decrease",
-        "REMOVE": "Remove"
+        "CHECKOUT": "Verificar",
+        "INCREASE": "Incrementar",
+        "DECREASE": "Disminución",
+        "REMOVE": "Eliminar"
     },
     "CHECKOUT": {
-        "NAME": "Name",
-        "PHONENUMBER": "Phone Number",
-        "EMAIL": "Email",
-        "SAVE": "Save"
+        "NAME": "Nombre",
+        "PHONENUMBER": "Número de teléfono",
+        "EMAIL": "Correo electrónico",
+        "SAVE": "Ahorrar"
     },
     "LOGIN": {
-        "TITLE": "Login Form",
-        "USERNAME": "User name",
-        "PASSWORD": "Password",
-        "LOGIN": "Login"
+        "TITLE": "Formulario de inicio de sesión",
+        "USERNAME": "Nombre de usuario",
+        "PASSWORD": "Contraseña",
+        "LOGIN": "Acceso"
     },
     "COMMON": {
-        "ID": "Id",
-        "NAME": "Name",
-        "DESCRIPTION": "Description",
-        "PRICE": "Price",
-        "QUANTITY": "Quantity",
-        "REQUIRED": "Required",
-        "MINLENGTH4": "At least 4 characters long."
+        "ID": "Identificación",
+        "NAME": "Nombre",
+        "DESCRIPTION": "Descripción",
+        "PRICE": "Precio",
+        "QUANTITY": "Cantidad",
+        "REQUIRED": "Requerido",
+        "MINLENGTH4": "Al menos 4 caracteres de largo."
     }
 }
