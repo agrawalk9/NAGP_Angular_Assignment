@@ -1,11 +1,37 @@
 {
-    "HOME": {
-        "TITLE": "Hello world from with ngx-translate!",
-        "SELECT": "Let me change the language from here",
-        "HELLO": "Heyyy {{value}}"
+    "PLP": {
+        "SEARCH": "Search for",
+        "CART": "Cart"
     },
-    "PRODUCT": {
-        "HEADING": "Product Heading",
-        "DISCARD_CHANGES": "D you want to discard the changes?"
+    "PDP": {
+        "ADDTOCART": "Add to cart"
+    },
+    "CART": {
+        "TOTAL": "Total",
+        "CHECKOUT": "Checkout",
+        "INCREASE": "Increase",
+        "DECREASE": "Decrease",
+        "REMOVE": "Remove"
+    },
+    "CHECKOUT": {
+        "NAME": "Name",
+        "PHONENUMBER": "Phone Number",
+        "EMAIL": "Email",
+        "SAVE": "Save"
+    },
+    "LOGIN": {
+        "TITLE": "Login Form",
+        "USERNAME": "User name",
+        "PASSWORD": "Password",
+        "LOGIN": "Login"
+    },
+    "COMMON": {
+        "ID": "Id",
+        "NAME": "Name",
+        "DESCRIPTION": "Description",
+        "PRICE": "Price",
+        "QUANTITY": "Quantity",
+        "REQUIRED": "Required",
+        "MINLENGTH4": "At least 4 characters long."
     }
 }

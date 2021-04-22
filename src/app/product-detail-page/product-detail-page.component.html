@@ -1,11 +1,11 @@
 <div class="card product-card">
   <img class="card-img-top" [src]="product.imageUrl" [alt]="product.name">
   <div class="card-body">
-    <p class="card-text">ID: {{product.id}}</p>
-    <p class="card-text">Name: {{product.name}}</p>
-    <p class="card-text">Description: {{product.description}}</p>
-    <p class="card-text">Price: {{product.price}}</p>
-    <p class="card-text">Quantity: {{product.quantity}}</p>
-    <button class="btn btn-primary" (click)="addToCart(product)">Add to cart</button>
+    <p class="card-text">{{ 'COMMON.ID' | translate }}: {{product.id}}</p>
+    <p class="card-text">{{ 'COMMON.NAME' | translate }}: {{product.name}}</p>
+    <p class="card-text">{{ 'COMMON.DESCRIPTION' | translate }}: {{product.description}}</p>
+    <p class="card-text">{{ 'COMMON.PRICE' | translate }}: {{product.price}}</p>
+    <p class="card-text">{{ 'COMMON.QUANTITY' | translate }}: {{product.quantity}}</p>
+    <button class="btn btn-primary" (click)="addToCart(product)">{{ 'PDP.ADDTOCART' | translate }}</button>
   </div>
 </div>

@@ -1,23 +1,13 @@
-<!-- <div class="wrapper fadeInDown">
-  <div id="formContent">
-    <div>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="password">
-      <button class="fadeIn fourth" (click)="logIn()">Log In</button>
-    </div>
-  </div>
-</div> -->
-
 <div class="checkout">
   <div class="card checkout-form">
     <div class="card-header">
-      Login Form
+      {{ 'LOGIN.TITLE' | translate }}
     </div>
     <div class="card-body">
       <form novalidate (ngSubmit)="logIn(loginForm)" #loginForm="ngForm">
         <div class="form-group row mb-2">
           <label class="col-md-2 col-form-label" for="login">
-            User Name
+            {{ 'LOGIN.USERNAME' | translate }}
           </label>
           <div class="col-md-8">
             <input id="login" name="login" class="form-control" required minlength="3" type="text"
@@ -26,17 +16,17 @@
               }">
             <span *ngIf="login.invalid && (login.dirty || login.touched)" class="alert alert-danger invalid-feedback">
               <span *ngIf="login.errors?.required">
-                Username is required.
+                {{ 'COMMON.REQUIRED' | translate }}
               </span>
               <span *ngIf="login.errors?.minlength">
-                username must be at least 4 characters long.
+                {{ 'COMMON.MINLENGTH4' | translate }}
               </span>
             </span>
           </div>
         </div>
         <div class="form-group row mb-2">
           <label class="col-md-2 col-form-label" for="password">
-            Password
+            {{ 'LOGIN.PASSWORD' | translate }}
           </label>
           <div class="col-md-8">
             <input id="password" name="password" class="form-control" required minlength="3" type="text"
@@ -45,10 +35,10 @@
               }">
             <span *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger invalid-feedback">
               <span *ngIf="password.errors?.required">
-                Password is required.
+                {{ 'COMMON.REQUIRED' | translate }}
               </span>
               <span *ngIf="password.errors?.minlength">
-                Password must be at least 4 characters long.
+                {{ 'COMMON.MINLENGTH4' | translate }}
               </span>
             </span>
           </div>
@@ -60,7 +50,7 @@
                   ? 'Save your entered data'
                   : 'Disabled until the form data is valid'
               " [disabled]="!loginForm.valid">
-              Login
+              {{ 'LOGIN.LOGIN' | translate }}
             </button>
           </div>
         </div>

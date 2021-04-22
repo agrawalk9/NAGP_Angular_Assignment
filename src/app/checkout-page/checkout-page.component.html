@@ -7,7 +7,7 @@
     <form novalidate (ngSubmit)="checkout(checkoutForm)" #checkoutForm="ngForm">
       <div class="form-group row mb-2">
         <label class="col-md-2 col-form-label" for="name">
-          Name
+          {{ 'CHECKOUT.NAME' | translate }}
         </label>
         <div class="col-md-8">
           <input id="name" name="name" class="form-control" required minlength="4" type="text"
@@ -16,17 +16,17 @@
             }">
           <span *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger invalid-feedback">
             <span *ngIf="name.errors?.required">
-              Name is required.
+              {{ 'COMMON.REQUIRED' | translate }}
             </span>
             <span *ngIf="name.errors?.minlength">
-              Name must be at least 4 characters long.
+              {{ 'COMMON.MINLENGTH4' | translate }}
             </span>
           </span>
         </div>
       </div>
       <div class="form-group row mb-2">
         <label class="col-md-2 col-form-label" for="number">
-          Phone Number
+          {{ 'CHECKOUT.PHONENUMBER' | translate }}
         </label>
         <div class="col-md-8">
           <input id="number" name="number" class="form-control" required type="number" [(ngModel)]="checkoutObj.number"
@@ -35,14 +35,14 @@
             }">
           <span *ngIf="number.invalid && (number.dirty || number.touched)" class="alert alert-danger invalid-feedback">
             <span *ngIf="number.errors?.required">
-              Number is required.
+              {{ 'COMMON.REQUIRED' | translate }}
             </span>
           </span>
         </div>
       </div>
       <div class="form-group row mb-2">
         <label class="col-md-2 col-form-label" for="email">
-          Email Address
+          {{ 'CHECKOUT.EMAIL' | translate }}
         </label>
         <div class="col-md-8">
           <input id="email" name="email" class="form-control" required minlength="4" type="text"
@@ -51,10 +51,10 @@
             }">
           <span *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger invalid-feedback">
             <span *ngIf="email.errors?.required">
-              Email is required.
+              {{ 'COMMON.REQUIRED' | translate }}
             </span>
             <span *ngIf="email.errors?.minlength">
-              Email must be at least 4 characters long.
+              {{ 'COMMON.MINLENGTH4' | translate }}
             </span>
           </span>
         </div>
@@ -66,7 +66,7 @@
                 ? 'Save your entered data'
                 : 'Disabled until the form data is valid'
             " [disabled]="!checkoutForm.valid">
-            Save
+            {{ 'CHECKOUT.SAVE' | translate }}
           </button>
         </div>
       </div>

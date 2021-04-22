@@ -1,6 +1,6 @@
 <div class="cart-header">
-    <div class="total">Total = {{total()}}</div>
-    <button class="btn btn-primary" *ngIf="products.length" (click)="checkout()">Checkout</button>
+    <div class="total">{{ 'CART.TOTAL' | translate }} = {{total()}}</div>
+    <button class="btn btn-primary" *ngIf="products.length" (click)="checkout()">{{ 'CART.CHECKOUT' | translate }}</button>
 </div>
 <ul>
     <div class="container">
@@ -8,14 +8,14 @@
         <div class="card product-card" *ngFor="let product of products">
           <img class="card-img-top" [src]="product.imageUrl" [alt]="product.name">
           <div class="card-body">
-            <p class="card-text">ID: {{product.id}}</p>
-            <p class="card-text">Name: {{product.name}}</p>
-            <p class="card-text">Description: {{product.description}}</p>
-            <p class="card-text">Price: {{product.price}}</p>
-            <p class="card-text">Quantity: {{product.quantity}}</p>
-            <button class="btn btn-primary cart-btn" (click)="increase(product.id)">Increase</button>
-            <button class="btn btn-primary cart-btn" (click)="decrease(product.id)">Decrease</button>
-            <button class="btn btn-primary cart-btn" (click)="remove(product.id)">Remove</button>
+            <p class="card-text">{{ 'COMMON.ID' | translate }}: {{product.id}}</p>
+            <p class="card-text">{{ 'COMMON.NAME' | translate }}: {{product.name}}</p>
+            <p class="card-text">{{ 'COMMON.DESCRIPTION' | translate }}: {{product.description}}</p>
+            <p class="card-text">{{ 'COMMON.PRICE' | translate }}: {{product.price}}</p>
+            <p class="card-text">{{ 'COMMON.QUANTITY' | translate }}: {{product.quantity}}</p>
+            <button class="btn btn-primary cart-btn" (click)="increase(product.id)">{{ 'CART.INCREASE' | translate }}</button>
+            <button class="btn btn-primary cart-btn" (click)="decrease(product.id)">{{ 'CART.DECREASE' | translate }}</button>
+            <button class="btn btn-primary cart-btn" (click)="remove(product.id)">{{ 'CART.REMOVE' | translate }}</button>
           </div>
         </div>
       </div>
