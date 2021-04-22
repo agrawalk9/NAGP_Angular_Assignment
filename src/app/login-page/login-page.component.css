@@ -1,0 +1,9 @@
+.checkout {
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-form {
+    width: 35%;
+    margin: 20px;
+}

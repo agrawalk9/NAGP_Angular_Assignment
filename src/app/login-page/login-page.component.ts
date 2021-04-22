@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as data from '../../assets/mock-data/user-data.json';
 
@@ -10,20 +11,25 @@ import * as data from '../../assets/mock-data/user-data.json';
 })
 export class LoginPageComponent implements OnInit {
 
-  login: string = ""
-  password: string = ""
-  users: any = (data as any).default
+  credentials: any = {};
+  users: any = (data as any).default;
 
-  constructor(private readonly httpClient: HttpClient, private readonly router: Router) { }
+  constructor(private readonly httpClient: HttpClient, private readonly router: Router) {
+    this.credentials = {
+      login: '',
+      password: ''
+    };
+   }
 
   ngOnInit(): void { }
 
-  logIn(): void {
-    if (this.users.findIndex((user: any) => user.password === this.password && user.login === this.login) !== -1) {
+  logIn(loginForm: NgForm): void {
+    if (this.users.findIndex((user: any) => user.password === this.credentials.password && user.login === this.credentials.login) !== -1) {
       sessionStorage.setItem('isLoggedIn', 'yes');
       this.router.navigateByUrl('/home/cart');
     } else {
       sessionStorage.setItem('isLoggedIn', 'no');
+      alert('Wrong credentials');
     }
   }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-checkout-page',
@@ -7,21 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutPageComponent implements OnInit {
 
-  checkoutObj: any = {}
+  checkoutObj: any = {};
 
-  constructor() { 
+  constructor(private readonly router: Router, private readonly cartService: CartService) {
     this.checkoutObj = {
-      "name": "",
-      "number": 0,
-      "email": "",
-      "shippingDetails": ""
-    }
+      name: '',
+      number: '',
+      email: '',
+      shippingDetails: ''
+    };
   }
 
   ngOnInit(): void {
   }
 
-  checkout(): void {
-    console.log("checked out");
-  } 
+  checkout(checkoutForm: NgForm): void {
+    this.checkoutObj.name = '';
+    this.checkoutObj.number = '';
+    this.checkoutObj.email = '';
+    this.checkoutObj.shippingDetails = '';
+    this.cartService.emptyCart();
+    alert('Checked Out');
+    this.router.navigateByUrl('/home');
+  }
 }

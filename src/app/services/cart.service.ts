@@ -51,4 +51,8 @@ export class CartService {
     // tslint:disable-next-line: no-string-literal
     this.addedProduct[index]['quantity'] = q + 1;
   }
+
+  emptyCart(): void {
+    this.addedProduct.length = 0;
+  }
 }

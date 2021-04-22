@@ -1,15 +1,25 @@
-<ol>
-    <li *ngFor="let product of products">
-        <div>{{product.id}}</div>
-        <div>{{product.name}}</div>
-        <div>{{product.description}}</div>
-        <div>{{product.price}}</div>
-        <div>{{product.quantity}}</div>
-        <button (click)="increase(product.id)">Increase</button>
-        <button (click)="decrease(product.id)">Decrease</button>
-        <button (click)="remove(product.id)">Remove</button>
-        <img class="product-image" [src]="product.imageUrl" [alt]="product.name">
-    </li>
-</ol>
-<div>Total = {{total()}}</div>
-<button *ngIf="products.length" (click)="checkout()">Checkout</button>
+<div class="cart-header">
+    <div class="total">Total = {{total()}}</div>
+    <button class="btn btn-primary" *ngIf="products.length" (click)="checkout()">Checkout</button>
+</div>
+<ul>
+    <div class="container">
+      <div class="row">
+        <div class="card product-card" *ngFor="let product of products">
+          <img class="card-img-top" [src]="product.imageUrl" [alt]="product.name">
+          <div class="card-body">
+            <p class="card-text">ID: {{product.id}}</p>
+            <p class="card-text">Name: {{product.name}}</p>
+            <p class="card-text">Description: {{product.description}}</p>
+            <p class="card-text">Price: {{product.price}}</p>
+            <p class="card-text">Quantity: {{product.quantity}}</p>
+            <button class="btn btn-primary cart-btn" (click)="increase(product.id)">Increase</button>
+            <button class="btn btn-primary cart-btn" (click)="decrease(product.id)">Decrease</button>
+            <button class="btn btn-primary cart-btn" (click)="remove(product.id)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ul>
+
+

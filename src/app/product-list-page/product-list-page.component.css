@@ -2,3 +2,10 @@
     display: flex;
     justify-content: space-between;
 }
+
+.product-card {
+    width: 18rem; 
+    cursor: pointer;
+    margin: 20px;
+    padding: 20px;
+}

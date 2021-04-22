@@ -1,4 +1,23 @@
-.product-image {
-    max-width: 20%;
-    max-height: 20%;
+.cart-header {
+    display: flex;
+    justify-content: center;
+}
+
+.total {
+    background-color: rgb(167, 208, 245);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card {
+    width: 18rem; 
+    cursor: pointer;
+    margin: 20px;
+    padding: 20px;
+}
+
+.cart-btn {
+    margin: 5px;
 }
