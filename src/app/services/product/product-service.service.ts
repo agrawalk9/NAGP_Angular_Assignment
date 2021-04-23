@@ -21,6 +21,7 @@ export class ProductServiceService {
   public getProductById(id?: string): Observable<Product[]> {
     const url = `${this.productBaseUrl}/products-data.json`;
     return this.httpClient.get<Product[]>(url).pipe(
+      // tslint:disable-next-line: no-string-literal
       (map ((data: any) => data.filter((obj: Product) => obj['id'] === id)))
     );
   }

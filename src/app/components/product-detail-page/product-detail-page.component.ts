@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Product } from '../model/product.model';
-import { CartService } from '../services/cart.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from '../../model/product.model';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -15,9 +15,9 @@ export class ProductDetailPageComponent implements OnInit {
   constructor(private readonly route: ActivatedRoute, private readonly router: Router, private readonly cartService: CartService) { }
 
   ngOnInit(): void {
+    // tslint:disable-next-line: deprecation
     this.route.data.subscribe({
-      next: (data) => { 
-        // console.log(data);
+      next: (data) => {
         this.product = data.product[0];
         // this.route.params.forEach((params: Params) => {
         //   let productId = params['id'];
@@ -31,7 +31,6 @@ export class ProductDetailPageComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
-    // console.log('added to cart');
     this.cartService.addProductToCart(product);
     this.router.navigateByUrl('/home/cart');
   }

@@ -1,6 +1,7 @@
 .search {
     display: flex;
     justify-content: space-between;
+    margin: 1rem 0.5rem 1rem 0.5rem;
 }
 
 .product-card {

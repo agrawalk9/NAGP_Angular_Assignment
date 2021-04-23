@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CartService } from '../services/cart.service';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-checkout-page',
   templateUrl: './checkout-page.component.html',
   styleUrls: ['./checkout-page.component.css']
 })
-export class CheckoutPageComponent implements OnInit {
+export class CheckoutPageComponent implements OnInit, OnDestroy {
 
   checkoutObj: any = {};
 
@@ -20,16 +20,18 @@ export class CheckoutPageComponent implements OnInit {
       shippingDetails: ''
     };
   }
-
-  ngOnInit(): void {
-  }
-
-  checkout(checkoutForm: NgForm): void {
+  ngOnDestroy(): void {
     this.checkoutObj.name = '';
     this.checkoutObj.number = '';
     this.checkoutObj.email = '';
     this.checkoutObj.shippingDetails = '';
     this.cartService.emptyCart();
+  }
+
+  ngOnInit(): void {
+  }
+
+  checkout(checkoutForm: NgForm): void {
     alert('Checked Out');
     this.router.navigateByUrl('/home');
   }
