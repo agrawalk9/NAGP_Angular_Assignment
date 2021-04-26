@@ -14,6 +14,10 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductsListPageComponent } from './components/products-list/products-list-page/products-list-page.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTreeModule } from '@angular/material/tree';
 
 export function HttpLoaderFactory(httpCLient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpCLient);
@@ -28,7 +32,8 @@ export function HttpLoaderFactory(httpCLient: HttpClient): TranslateHttpLoader {
     CheckoutPageComponent,
     LoginPageComponent,
     ErrorPageComponent,
-    SearchPipe
+    SearchPipe,
+    ProductsListPageComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,10 @@ export function HttpLoaderFactory(httpCLient: HttpClient): TranslateHttpLoader {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

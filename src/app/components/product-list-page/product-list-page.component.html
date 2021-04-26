@@ -1,29 +1,36 @@
 <div class="search">
   <div>
-    <input name="searchInput" [(ngModel)]="searchInput" type="text" placeholder="{{ 'PLP.SEARCH' | translate }}" size="50">
+    <input name="searchInput" [(ngModel)]="searchInput" type="text" placeholder="{{ 'PLP.SEARCH' | translate }}"
+      size="50">
   </div>
   <div>
     <button class="btn btn-primary" (click)="goToCart()">{{ 'PLP.CART' | translate }}</button>
   </div>
 </div>
+<!-- <div style="display: flex;"> -->
 
-<ul *ngFor="let category of products">
-  <li>
-    {{ category.category }}
-  </li>
-  <div class="container">
-    <div class="row">
-      <div class="card product-card" (click)="goToPdp(product.id)"
-        *ngFor="let product of category.list | search: searchInput">
-        <img class="card-img-top" [src]="product.imageUrl" [alt]="product.name">
-        <div class="card-body">
-          <p class="card-text">{{ 'COMMON.ID' | translate }}: {{product.id}}</p>
-          <p class="card-text">{{ 'COMMON.NAME' | translate }}: {{product.name}}</p>
-          <p class="card-text">{{ 'COMMON.DESCRIPTION' | translate }}: {{product.description}}</p>
-          <p class="card-text">{{ 'COMMON.PRICE' | translate }}: {{product.price}}</p>
-          <p class="card-text">{{ 'COMMON.QUANTITY' | translate }}: {{product.quantity}}</p>
+  <div>
+    <div *ngFor="let category of products" class="category-product-list">
+      <div>
+        {{ category.category }}
+      </div>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="card product-card" (click)="goToPdp(product.id)"
+            *ngFor="let product of category.list | search: searchInput">
+            <img class="card-img-top" [src]="product.imageUrl" [alt]="product.name">
+            <div class="card-body">
+              <p class="card-text">{{ 'COMMON.ID' | translate }}: {{product.id}}</p>
+              <p class="card-text">{{ 'COMMON.NAME' | translate }}: {{product.name}}</p>
+              <p class="card-text">{{ 'COMMON.DESCRIPTION' | translate }}: {{product.description}}</p>
+              <p class="card-text">{{ 'COMMON.PRICE' | translate }}: {{product.price}}</p>
+              <p class="card-text">{{ 'COMMON.QUANTITY' | translate }}: {{product.quantity}}</p>
+            </div>
+          </div>
         </div>
+        <hr class="style5">
       </div>
     </div>
   </div>
-</ul>
+<!-- </div> -->

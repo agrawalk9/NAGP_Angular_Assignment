@@ -10,12 +10,13 @@ import { ProductDetailPageComponent } from './components/product-detail-page/pro
 import { ProductListPageComponent } from './components/product-list-page/product-list-page.component';
 import { ProductResolver } from './resolver/product/product.resolver';
 import { ProductsResolver } from './resolver/products/products.resolver';
+import { ProductsListPageComponent } from './components/products-list/products-list-page/products-list-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: LoginPageComponent },
   { path: 'home', children: [
-    { path: '', component: ProductListPageComponent, resolve: {
+    { path: '', component: ProductsListPageComponent, resolve: {
       products: ProductsResolver
     } },
     { path: 'product/:id', component: ProductDetailPageComponent, resolve: {

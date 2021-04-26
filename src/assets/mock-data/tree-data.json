@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Apparels",
+        "children": [
+            {
+                "name": "Headwear",
+                "children": [
+                    {
+                        "name": "Hats"
+                    },
+                    {
+                        "name": "Caps"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Technology",
+        "children": [
+            {
+                "name": "Smartphones",
+                "children": [
+                    {
+                        "name": "Touch Smartphone"
+                    },
+                    {
+                        "name": "Keypad Smartphone"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Food",
+        "children": [
+            {
+                "name": "Non-Veg",
+                "children": [
+                    {
+                        "name": "Chicken"
+                    },
+                    {
+                        "name": "Mutton"
+                    }
+                ]
+            }
+        ]
+    }
+]
