@@ -25,10 +25,10 @@ export class LoginPageComponent implements OnInit {
 
   logIn(loginForm: NgForm): void {
     if (this.users.findIndex((user: any) => user.password === this.credentials.password && user.login === this.credentials.login) !== -1) {
-      sessionStorage.setItem('isLoggedIn', 'yes');
+      sessionStorage.setItem('loggedIn', 'yes');
       this.router.navigateByUrl('/home/cart');
     } else {
-      sessionStorage.setItem('isLoggedIn', 'no');
+      sessionStorage.setItem('loggedIn', 'no');
       alert('Wrong credentials');
     }
   }
