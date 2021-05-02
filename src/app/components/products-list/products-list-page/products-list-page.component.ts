@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import * as tree from '../../../../assets/mock-data/tree-data.json';
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {MatTreeNestedDataSource} from '@angular/material/tree';
+import { Product } from 'src/app/model/product.model';
+import { CartService } from 'src/app/services/cart/cart.service';
 
 
 interface ProductNode {
@@ -20,14 +22,11 @@ export class ProductsListPageComponent implements OnInit {
 
   products: any = [];
   searchInput = '';
-  // isMasterSel = false;
-  // categoryList: any;
-  // checkedCategoryList: any;
 
   treeControl = new NestedTreeControl<ProductNode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<ProductNode>();
 
-  constructor(private readonly route: ActivatedRoute, private readonly router: Router) {
+  constructor(private readonly route: ActivatedRoute, private readonly router: Router, private readonly cartService: CartService) {
     this.dataSource.data = (tree as any).default;
   }
 
@@ -55,29 +54,10 @@ export class ProductsListPageComponent implements OnInit {
     });
   }
 
-  // checkUncheckAll(): void {
-  //   for (const category of this.categoryList.length) {
-  //     category.isSelected = this.isMasterSel;
-  //   }
-  //   this.getCheckedItemList();
-  // }
-
-  // isAllSelected(): void {
-  //   this.isMasterSel = this.categoryList.every((item: any) => {
-  //       return item.isSelected === true;
-  //     });
-  //   this.getCheckedItemList();
-  // }
-
-  // getCheckedItemList(): void{
-  //   this.checkedCategoryList = [];
-  //   for (const category of this.categoryList.length) {
-  //     if (category.isSelected) {
-  //     this.checkedCategoryList.push(category);
-  //     }
-  //   }
-  //   this.checkedCategoryList = JSON.stringify(this.checkedCategoryList);
-  // }
+  addToCart(product: Product): void {
+    this.cartService.addProductToCart(product);
+    this.router.navigateByUrl('/home/cart');
+  }
 
   goToPdp(id: string): void {
     this.router.navigateByUrl(`/home/product/${id}`);

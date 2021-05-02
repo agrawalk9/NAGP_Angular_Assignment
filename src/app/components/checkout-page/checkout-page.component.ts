@@ -17,14 +17,14 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
       name: '',
       number: '',
       email: '',
-      shippingDetails: ''
+      address: ''
     };
   }
   ngOnDestroy(): void {
     this.checkoutObj.name = '';
     this.checkoutObj.number = '';
     this.checkoutObj.email = '';
-    this.checkoutObj.shippingDetails = '';
+    this.checkoutObj.address = '';
     this.cartService.emptyCart();
   }
 
@@ -32,7 +32,7 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
   }
 
   checkout(checkoutForm: NgForm): void {
-    alert('Checked Out');
+    alert('Your order has been placed');
     this.router.navigateByUrl('/home');
   }
 }

@@ -17,11 +17,12 @@
         "NAME": "Nombre",
         "PHONENUMBER": "Número de teléfono",
         "EMAIL": "Correo electrónico",
-        "SAVE": "Ahorrar"
+        "SAVE": "Ahorrar",
+        "ADDRESS": "Habla a"
     },
     "LOGIN": {
         "TITLE": "Formulario de inicio de sesión",
-        "USERNAME": "Nombre de usuario",
+        "EMAIL": "Correo electrónico",
         "PASSWORD": "Contraseña",
         "LOGIN": "Acceso"
     },

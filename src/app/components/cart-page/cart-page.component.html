@@ -12,9 +12,11 @@
             <p class="card-text">{{ 'COMMON.NAME' | translate }}: {{product.name}}</p>
             <p class="card-text">{{ 'COMMON.DESCRIPTION' | translate }}: {{product.description}}</p>
             <p class="card-text">{{ 'COMMON.PRICE' | translate }}: {{product.price}}</p>
-            <p class="card-text">{{ 'COMMON.QUANTITY' | translate }}: {{product.quantity}}</p>
-            <button class="btn btn-primary cart-btn" (click)="increase(product.id)">{{ 'CART.INCREASE' | translate }}</button>
-            <button class="btn btn-primary cart-btn" (click)="decrease(product.id)">{{ 'CART.DECREASE' | translate }}</button>
+            <div class="quantity-stepper">
+              <button class="btn btn-primary cart-btn" (click)="increase(product.id)">+</button>
+              <p class="card-text" style="margin: 1rem;">{{product.quantity}}</p>
+              <button class="btn btn-primary cart-btn" (click)="decrease(product.id)">-</button>
+            </div>
             <button class="btn btn-primary cart-btn" (click)="remove(product.id)">{{ 'CART.REMOVE' | translate }}</button>
           </div>
         </div>

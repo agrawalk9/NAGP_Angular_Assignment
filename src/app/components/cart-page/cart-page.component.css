@@ -21,3 +21,8 @@
 .cart-btn {
     margin: 5px;
 }
+
+.quantity-stepper {
+    display: flex;
+    align-items: flex-end;
+}

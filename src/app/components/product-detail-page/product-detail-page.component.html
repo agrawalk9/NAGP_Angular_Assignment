@@ -8,7 +8,7 @@
         <h5 class="card-title">{{ 'COMMON.NAME' | translate }}: {{product.name}}</h5>
         <p class="card-text"><small class="text-muted">{{ 'COMMON.ID' | translate }}: {{product.id}}</small></p>
         <p class="card-text"><small class="text-muted">{{ 'COMMON.DESCRIPTION' | translate }}: {{product.description}}</small></p>
-        <p class="card-text"><small class="text-muted">{{ 'COMMON.PRICE' | translate }}: {{product.price}}</small></p>
+        <p class="card-text"><small class="text-muted">{{ 'COMMON.PRICE' | translate }}: {{product.unitPrice}}</small></p>
         <p class="card-text"><small class="text-muted">{{ 'COMMON.QUANTITY' | translate }}: {{product.quantity}}</small></p>
         <button class="btn btn-primary" (click)="addToCart(product)">{{ 'PDP.ADDTOCART' | translate }}</button>
       </div>

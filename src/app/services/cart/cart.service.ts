@@ -16,6 +16,8 @@ export class CartService {
     if (index !== -1) {
       // tslint:disable-next-line: no-string-literal
       this.addedProduct[index]['quantity'] = +this.addedProduct[index]['quantity'] + 1;
+      this.addedProduct[index]['price'] = +this.addedProduct[index]['quantity'] * this.addedProduct[index]['unitPrice'];
+      console.log(this.addedProduct[index]['price']);
     } else {
       this.addedProduct.push(product);
     }
@@ -38,6 +40,7 @@ export class CartService {
     if (q > 1) {
       // tslint:disable-next-line: no-string-literal
       this.addedProduct[index]['quantity'] = q - 1;
+      this.addedProduct[index]['price'] = +this.addedProduct[index]['quantity'] * this.addedProduct[index]['unitPrice'];
     } else {
       this.removeProduct(id);
     }
@@ -50,6 +53,7 @@ export class CartService {
     const q = +this.addedProduct[index]['quantity'];
     // tslint:disable-next-line: no-string-literal
     this.addedProduct[index]['quantity'] = q + 1;
+    this.addedProduct[index]['price'] = +this.addedProduct[index]['quantity'] * this.addedProduct[index]['unitPrice'];
   }
 
   emptyCart(): void {

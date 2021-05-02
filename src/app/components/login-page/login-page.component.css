@@ -4,6 +4,10 @@
 }
 
 .checkout-form {
-    width: 35%;
+    width: 30%;
     margin: 20px;
+}
+
+.card-header {
+    background: cadetblue;
 }

@@ -40,7 +40,7 @@ export class CartPageComponent implements OnInit {
   total(): Number {
     let sum = 0;
     this.products.forEach((element: Product) => {
-      sum = sum + (+element['price']*+element['quantity']);
+      sum = sum + (+element['unitPrice']*+element['quantity']);
     });
     return sum;
   }

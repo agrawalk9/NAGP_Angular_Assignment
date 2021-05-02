@@ -17,11 +17,12 @@
         "NAME": "Name",
         "PHONENUMBER": "Phone Number",
         "EMAIL": "Email",
-        "SAVE": "Save"
+        "SAVE": "Save",
+        "ADDRESS": "Address"
     },
     "LOGIN": {
         "TITLE": "Login Form",
-        "USERNAME": "User name",
+        "EMAIL": "Email",
         "PASSWORD": "Password",
         "LOGIN": "Login"
     },

@@ -4,11 +4,12 @@ export class Product {
     private name: string;
     private description: string;
     private category: string;
+    private unitPrice: number;
     private price: number;
     private quantity: number;
     private imageUrl: string;
 
-    constructor(id: string, name: string, description: string, category: string, price: number, quantity: number, imageUrl: string) {
+    constructor(id: string, name: string, description: string, category: string, price: number, quantity: number, imageUrl: string, unitPrice: number) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -16,6 +17,7 @@ export class Product {
         this.price = price;
         this.quantity = quantity;
         this.imageUrl = imageUrl;
+        this.unitPrice = unitPrice;
     }
 
     public getId(): string {
@@ -36,6 +38,10 @@ export class Product {
 
     public getPrice(): number {
         return this.price;
+    }
+
+    public getUnitPrice(): number {
+        return this.unitPrice;
     }
 
     public getQuantity(): number {
@@ -64,6 +70,10 @@ export class Product {
 
     public setPrice(value: number): void {
         this.price = value;
+    }
+
+    public setUnitPrice(value: number): void {
+        this.unitPrice = value;
     }
 
     public setQuantity(value: number): void {
