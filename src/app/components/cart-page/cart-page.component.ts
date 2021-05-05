@@ -37,10 +37,11 @@ export class CartPageComponent implements OnInit {
     this.products = this.cartService.getProducts();
   }
 
-  total(): Number {
+  total(): number {
     let sum = 0;
     this.products.forEach((element: Product) => {
-      sum = sum + (+element['unitPrice']*+element['quantity']);
+      // tslint:disable-next-line: no-string-literal
+      sum = sum + (+element['unitPrice'] * +element['quantity']);
     });
     return sum;
   }
