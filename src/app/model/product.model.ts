@@ -10,8 +10,8 @@ export class Product {
     private imageUrl: string;
 
     constructor(id: string, name: string, description: string,
-        category: string, price: number, quantity: number,
-        imageUrl: string, unitPrice: number) {
+                category: string, price: number, quantity: number,
+                imageUrl: string, unitPrice: number) {
         this.id = id;
         this.name = name;
         this.description = description;
