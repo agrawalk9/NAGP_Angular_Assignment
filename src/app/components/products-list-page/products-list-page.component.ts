@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import * as tree from '../../../../assets/mock-data/tree-data.json';
+import * as tree from '../../../assets/mock-data/tree-data.json';
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {MatTreeNestedDataSource} from '@angular/material/tree';
 import { Product } from 'src/app/model/product.model';

@@ -6,7 +6,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
-import { ProductListPageComponent } from './components/product-list-page/product-list-page.component';
 import { ProductDetailPageComponent } from './components/product-detail-page/product-detail-page.component';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { CheckoutPageComponent } from './components/checkout-page/checkout-page.component';
@@ -15,7 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductsListPageComponent } from './components/products-list/products-list-page/products-list-page.component';
+import { ProductsListPageComponent } from './components/products-list-page/products-list-page.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTreeModule } from '@angular/material/tree';
 
@@ -26,7 +25,6 @@ export function HttpLoaderFactory(httpCLient: HttpClient): TranslateHttpLoader {
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListPageComponent,
     ProductDetailPageComponent,
     CartPageComponent,
     CheckoutPageComponent,

@@ -7,10 +7,9 @@ import { AuthGuard } from './guards/auth/auth.guard';
 import { CheckoutGuard } from './guards/checkout/checkout.guard';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { ProductDetailPageComponent } from './components/product-detail-page/product-detail-page.component';
-import { ProductListPageComponent } from './components/product-list-page/product-list-page.component';
 import { ProductResolver } from './resolver/product/product.resolver';
 import { ProductsResolver } from './resolver/products/products.resolver';
-import { ProductsListPageComponent } from './components/products-list/products-list-page/products-list-page.component';
+import { ProductsListPageComponent } from './components/products-list-page/products-list-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
